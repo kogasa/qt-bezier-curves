@@ -51,6 +51,8 @@ void BezierCurve::recalculate()
         curvePoints.append(new QPoint(x, y));
         x = y = 0;
     }
+
+    curvePoints.append(nodes.back());
 }
 
 int BezierCurve::c(int n, int k)
